@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.favour.e_libary">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Elibary">
+        <activity android:name=".changepassword"></activity>
+        <activity android:name=".editprofile" />
+        <activity android:name=".categoriespage" />
+        <activity android:name=".settingspage" />
+        <activity android:name=".paymentsuccess" />
+        <activity android:name=".pay" />
+        <activity android:name=".romance" />
+        <activity android:name=".aboutbooks" />
+        <activity android:name=".aboutbook" />
+        <activity android:name=".search" />
+        <activity android:name=".profilepage" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".createaccount" />
+        <activity android:name=".login" />
+        <activity
+            android:name=".bottomnav"
+            android:label="@string/title_activity_bottomnav" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
