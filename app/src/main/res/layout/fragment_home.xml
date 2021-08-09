@@ -280,12 +280,15 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/toppicks"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+
+                />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="#A0616A"
                 android:layout_marginEnd="15dp"
+                android:layout_marginBottom="200dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:id="@+id/login"

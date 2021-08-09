@@ -12,21 +12,21 @@ class recyclertalkoftown : RecyclerView.Adapter<recyclertalkoftown.viewHolder >(
     var tx1t:Array<String> = arrayOf("The Dark World","Colours Of Life","Beauty")
     var txt2t:Array<String> = arrayOf("19k","100k","1.97m")
     var txt3t:Array<String> = arrayOf("English","Spanish","Korea")
-    var txt4t:Array<String> = arrayOf("The Dark World,(ALttP | FSA) also known as the Evil Realm,(OoT) is a recurring location in The Legend of Zelda series","Colours Of Life","Beauty")
+    var txt4t:Array<String> = arrayOf("Paid Story","Free Story","Paid Story")
 
-    var img1:Array<Int> = arrayOf(R.drawable.thriller1,R.drawable.fre,R.drawable.rom,R.drawable.mys,R.drawable.educa,R.drawable.history)
+    var imgageg1:Array<Int> = arrayOf(R.drawable.thriller1,R.drawable.thriller1,R.drawable.thriller1)
     inner class viewHolder (ItemView: View): RecyclerView.ViewHolder(ItemView) {
-    var text1: TextView
-    var text2:TextView
-    var text3:TextView
-    var text4:TextView
-    lateinit var image:ImageView
+    var text11: TextView
+    var text22:TextView
+    var text33:TextView
+    var text44:TextView
+     var image12:ImageView
         init {
-           text1 = itemView.findViewById(R.id.showTitle)
-            text2=itemView.findViewById(R.id.likes)
-           text3 =itemView.findViewById(R.id.lang)
-            text4=itemView.findViewById(R.id.description)
-            image=itemView.findViewById(R.id.cover)
+           text11 = itemView.findViewById(R.id.talktitle)
+            text22=itemView.findViewById(R.id.likes1)
+           text33 =itemView.findViewById(R.id.lang1)
+            text44=itemView.findViewById(R.id.desc)
+            image12=itemView.findViewById(R.id.thr)
     }
 
 }
@@ -39,11 +39,11 @@ class recyclertalkoftown : RecyclerView.Adapter<recyclertalkoftown.viewHolder >(
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
 
-        holder.text1.text=tx1t[position]
-        holder.text2.text=tx1t[position]
-        holder.text3.text=tx1t[position]
-        holder.text4.text=tx1t[position]
-        holder.image.setImageResource(img1[position])
+        holder.text11.text=tx1t[position]
+        holder.text22.text=txt2t[position]
+        holder.text33.text=txt3t[position]
+        holder.text44.text=txt4t[position]
+        holder.image12.setImageResource(imgageg1[position])
     }
     override fun getItemCount(): Int {
         return tx1t.size

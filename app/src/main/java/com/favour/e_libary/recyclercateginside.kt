@@ -9,27 +9,27 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class recyclercateginside : RecyclerView.Adapter<recyclercateginside.viewHolder >(){
-    var tx1:Array<String> = arrayOf("The Dark World","Colours Of Life","Beauty")
-    var txt2:Array<String> = arrayOf("19k","100k","1.97m")
-    var txt3:Array<String> = arrayOf("English","Spanish","Korea")
-    var txt4:Array<String> = arrayOf("The Dark World,(ALttP | FSA) also known as the Evil Realm,(OoT) is a recurring location in The Legend of Zelda series","Colours Of Life","Beauty")
+    var tx1tt:Array<String> = arrayOf("The Dark World","Colours Of Life","Beauty","Beaut")
+    var txt2tt:Array<String> = arrayOf("19k","100k","1.97m","1.99m")
+    var txt3tt:Array<String> = arrayOf("English","Spanish","Korea","English")
+    var txt4tt:Array<String> = arrayOf("The Dark World,(ALttP | FSA) also known as the Evil Realm,(OoT) is a recurring location in The Legend of Zelda series","Colours Of Life","Beauty","That's always seemed so ridiculous to me, that people want to be around someone because they're pretty.")
 
-    var img1:Array<Int> = arrayOf(R.drawable.paidstories,R.drawable.fre,R.drawable.rom,R.drawable.mys,R.drawable.educa,R.drawable.history)
+    var imgageg1t1:Array<Int> = arrayOf(R.drawable.thriller1,R.drawable.thriller1,R.drawable.thriller1,R.drawable.thriller1)
     inner class viewHolder (ItemView: View): RecyclerView.ViewHolder(ItemView) {
-    var text1: TextView
-        var text2:TextView
-    var text3:TextView
-    var text4:TextView
-    lateinit var image:ImageView
+        var text11t: TextView
+        var text22t:TextView
+        var text33t:TextView
+        var text44t:TextView
+        var image12t:ImageView
         init {
-           text1 = itemView.findViewById(R.id.showTitle)
-            text2=itemView.findViewById(R.id.likes)
-           text3 =itemView.findViewById(R.id.lang)
-            text4=itemView.findViewById(R.id.description)
-            image=itemView.findViewById(R.id.cover)
-    }
+            text11t = itemView.findViewById(R.id.title1)
+            text22t=itemView.findViewById(R.id.likes)
+            text33t =itemView.findViewById(R.id.lang)
+            text44t=itemView.findViewById(R.id.description)
+            image12t=itemView.findViewById(R.id.cover)
+        }
 
-}
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val valu= LayoutInflater.from(parent.context).inflate(R.layout.categinside,parent,false)
@@ -39,13 +39,13 @@ class recyclercateginside : RecyclerView.Adapter<recyclercateginside.viewHolder 
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
 
-        holder.text1.text=tx1[position]
-        holder.text2.text=tx1[position]
-        holder.text3.text=tx1[position]
-        holder.text4.text=tx1[position]
-        holder.image.setImageResource(img1[position])
+        holder.text11t.text=tx1tt[position]
+        holder.text22t.text=txt2tt[position]
+        holder.text33t.text=txt3tt[position]
+        holder.text44t.text=txt4tt[position]
+        holder.image12t.setImageResource(imgageg1t1[position])
     }
     override fun getItemCount(): Int {
-        return tx1.size
+        return tx1tt.size
     }
 }
