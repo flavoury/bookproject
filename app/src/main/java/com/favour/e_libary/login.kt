@@ -14,7 +14,6 @@ class login : AppCompatActivity() {
         sign.setOnClickListener {
             val next1 = Intent(this, bottomnav::class.java)
             startActivity(next1)
-
         }
     }
 }
