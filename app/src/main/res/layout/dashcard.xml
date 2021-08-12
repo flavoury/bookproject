@@ -27,7 +27,8 @@
             android:textColor="@color/black"
             android:fontFamily="@font/montserrat"
             android:gravity="start"
-            android:layout_gravity="start"
-/>    </LinearLayout>
+            android:layout_marginStart="12dp"
+            android:layout_gravity="start" />
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

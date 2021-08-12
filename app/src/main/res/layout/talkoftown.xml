@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="175dp"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
     android:layout_marginTop="10dp"
     android:background="@color/main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="6dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="180dp"
     >
-
-
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/thr"
+            android:layout_width="130dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/thriller1"
+            >
+        </ImageView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,21 +34,19 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"
         android:background="@color/white"
-
         >
-
         <TextView
+            android:id="@+id/talktitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
             android:fontFamily="@font/montserrat_alternates"
             android:text="The Dark World"
             android:layout_marginTop="5dp"
             android:textColor="@color/main" />
         <TextView
+            android:id="@+id/desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
             android:textSize="10dp"
             android:fontFamily="@font/montserrat_alternates"
             android:text="The Dark World,(ALttP | FSA) also known as the Evil Realm,(OoT) is a recurring location in The Legend of Zelda series"
@@ -45,27 +57,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="130dp"
-
             >
-            <ImageView
-                android:layout_marginEnd="3dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:background="@drawable/ic_baseline_favorite_border_24"
-                />
-            <TextView
-                android:id="@+id/likes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="75k"
-                android:textSize="10dp"
-                android:layout_gravity="center"
-                android:fontFamily="@font/montserrat"
-                android:layout_marginEnd="10dp"
-                />
-
             <ImageView
                 android:layout_marginEnd="5dp"
                 android:layout_gravity="center"
@@ -74,7 +66,7 @@
                 android:background="@drawable/ic_baseline_language_24"
                 />
             <TextView
-                android:id="@+id/lang"
+                android:id="@+id/lang1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="English"
@@ -91,7 +83,7 @@
                 android:background="@drawable/ic_baseline_format_list_bulleted_24"
                 />
             <TextView
-                android:id="@+id/parts"
+                android:id="@+id/parts1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="91 Parts"
@@ -100,72 +92,59 @@
                 android:fontFamily="@font/montserrat"
                 />
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginStart="5dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="43dp"
-        >
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:id="@+id/btnlog"
-            android:gravity="center"
+            android:layout_width="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/readbtn"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             >
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:background="@drawable/ic_baseline_auto_stories"
-                android:layout_gravity="center"
-                android:layout_marginEnd="12dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Read"
-                android:textSize="10dp"
-                android:layout_gravity="center"
-                android:fontFamily="@font/montserrat"
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:id="@+id/btnlog"
                 android:gravity="center"
-                android:textColor="@color/white"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/btnsign"
-            android:gravity="end"
-            android:layout_marginStart="15dp"
-            android:orientation="horizontal"
-            android:background="@drawable/addbtn"
-            >
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:background="@drawable/ic_baseline_add_24"
-                android:layout_gravity="center"
-                android:foregroundGravity="center"
-                android:layout_marginEnd="12dp"
-                />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:background="@drawable/readbtn"
+                >
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/ic_baseline_auto_stories"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="12dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Read"
+                    android:textSize="10dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="25dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:id="@+id/btnsign"-->
+<!--                android:gravity="end"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:background="@drawable/addbtn"-->
+<!--                >-->
+<!--                <ImageView-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="10dp"-->
+<!--                    android:background="@drawable/ic_baseline_add_24"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:foregroundGravity="center"-->
+<!--                    android:layout_marginEnd="12dp"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
     </LinearLayout>
-     <ImageView
-            android:layout_width="130dp"
-            android:layout_height="200dp"
+    </LinearLayout>
+    </LinearLayout>
 
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="-20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/thriller1"
-            android:gravity="center"
-            >
-        </ImageView>
 
 </androidx.cardview.widget.CardView>

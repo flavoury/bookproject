@@ -8,44 +8,33 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class recyclertalkoftown : RecyclerView.Adapter<recyclertalkoftown.viewHolder >(){
-    var tx1t:Array<String> = arrayOf("The Dark World","Colours Of Life","Beauty")
-    var txt2t:Array<String> = arrayOf("19k","100k","1.97m")
-    var txt3t:Array<String> = arrayOf("English","Spanish","Korea")
-    var txt4t:Array<String> = arrayOf("The Dark World,(ALttP | FSA) also known as the Evil Realm,(OoT) is a recurring location in The Legend of Zelda series","Colours Of Life","Beauty")
-
-    var img1:Array<Int> = arrayOf(R.drawable.thriller1,R.drawable.fre,R.drawable.rom,R.drawable.mys,R.drawable.educa,R.drawable.history)
+class recyclertalkoftown (private var bookslist: ArrayList<booksItem>) : RecyclerView.Adapter<recyclertalkoftown.viewHolder >(){
     inner class viewHolder (ItemView: View): RecyclerView.ViewHolder(ItemView) {
-    var text1: TextView
-    var text2:TextView
-    var text3:TextView
-    var text4:TextView
-    lateinit var image:ImageView
+    var text11: TextView
+    var text33:TextView
+    var text44:TextView
+    var text55: TextView
         init {
-           text1 = itemView.findViewById(R.id.showTitle)
-            text2=itemView.findViewById(R.id.likes)
-           text3 =itemView.findViewById(R.id.lang)
-            text4=itemView.findViewById(R.id.description)
-            image=itemView.findViewById(R.id.cover)
+           text11 = itemView.findViewById(R.id.talktitle)
+           text33 =itemView.findViewById(R.id.lang1)
+            text44 =itemView.findViewById(R.id.desc)
+            text55 = itemView.findViewById(R.id.parts1)
     }
-
 }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val valu= LayoutInflater.from(parent.context).inflate(R.layout.talkoftown,parent,false)
         return viewHolder(valu)
-
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-
-        holder.text1.text=tx1t[position]
-        holder.text2.text=tx1t[position]
-        holder.text3.text=tx1t[position]
-        holder.text4.text=tx1t[position]
-        holder.image.setImageResource(img1[position])
+        var currentItem = bookslist[position]
+        holder.text11.text = currentItem.getname()
+        holder.text33.text = currentItem.getlanguage()
+        holder.text55.text = currentItem.getparts().toString()
+        holder.text44.text =  currentItem.getdescription().substring(0, 100)
     }
     override fun getItemCount(): Int {
-        return tx1t.size
+        return bookslist.size
     }
 }

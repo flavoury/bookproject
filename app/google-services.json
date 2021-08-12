@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "205468681877",
+    "project_id": "e-libary-390d5",
+    "storage_bucket": "e-libary-390d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205468681877:android:e0b11bcf2fb0dcf2b2fd9c",
+        "android_client_info": {
+          "package_name": "com.favour.e_libary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205468681877-kgfghjoqvksuno532j061iajkoj4lape.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApQUf5qtW8IgujByqhLrbHhdyQWbXe4YI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205468681877-kgfghjoqvksuno532j061iajkoj4lape.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
