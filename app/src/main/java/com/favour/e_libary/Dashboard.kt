@@ -33,6 +33,7 @@ class Dashboard : AppCompatActivity() {
         val bkpartsid = findViewById<TextInputEditText>(R.id.parts)
         val bkpriceid = findViewById<TextInputEditText>(R.id.bkprice)
         val bkdescr = findViewById<TextInputEditText>(R.id.bkdescription)
+        val bkauthid = findViewById<TextInputEditText>(R.id.bkauthor)
         val btnuploadid = findViewById<Button>(R.id.upload)
 
         btnuploadid.setOnClickListener {
@@ -41,6 +42,7 @@ class Dashboard : AppCompatActivity() {
             var bkpartstr = bkpartsid.text.toString()
             var bkdescstr = bkdescr.text.toString()
             var bkprice = bkpriceid.text.toString()
+            var bkauthstr = bkauthid.text.toString()
 
             when {
                 bknamestr.isEmpty() -> {
@@ -68,9 +70,14 @@ class Dashboard : AppCompatActivity() {
                     bkpriceid.requestFocus()
                     return@setOnClickListener
                 }
+                bkauthstr.isEmpty() -> {
+                    bkauthid.error = "Field is required"
+                    bkauthid.requestFocus()
+                    return@setOnClickListener
+                }
                 else -> {
                     var insertkey = connection.push().key.toString()
-                    uploadImgFiles(bknamestr, bklangstr, bkpartstr.toInt(), bkprice.toInt(), bkdescstr, insertkey)
+                    uploadImgFiles(bknamestr, bklangstr, bkpartstr, bkprice, bkdescstr, insertkey, bkauthstr)
                 }
             }
         }
@@ -116,7 +123,7 @@ class Dashboard : AppCompatActivity() {
         startActivityForResult(Intent.createChooser(intent,"select pdf file"), 212)
     }
 
-    private fun uploadImgFiles(name: String, lang: String, parts: Int, price: Int, description: String, insertkey: String){
+    private fun uploadImgFiles(name: String, lang: String, parts: String, price: String, description: String, insertkey: String, author: String){
 
         if (path != null){
 
@@ -126,7 +133,7 @@ class Dashboard : AppCompatActivity() {
             imgref.putFile(path).addOnSuccessListener {
                 imgref.downloadUrl.addOnSuccessListener {
                     fbimgurl = it.toString()
-                    uploadpdfFiles(name, lang, parts, price, description, fbimgurl, insertkey)
+                    uploadpdfFiles(name, lang, parts, price, description, fbimgurl, insertkey, author)
                 }
                     .addOnFailureListener {
                         Toast.makeText(this, "Unable to get image url", Toast.LENGTH_SHORT).show()
@@ -138,7 +145,7 @@ class Dashboard : AppCompatActivity() {
         }
     }
 
-   private fun uploadpdfFiles(name: String, lang: String, parts: Int, price: Int, description: String, coverimgurl: String, insertkey: String){
+   private fun uploadpdfFiles(name: String, lang: String, parts: String, price: String, description: String, coverimgurl: String, insertkey: String, author: String){
         if (pdfpath != null){
 
             lateinit var fbpdfurl : String
@@ -147,7 +154,7 @@ class Dashboard : AppCompatActivity() {
             pdfref.putFile(pdfpath).addOnSuccessListener {
                 pdfref.downloadUrl.addOnSuccessListener {
                     fbpdfurl = it.toString()
-                    insertBookToDB(name, lang, parts, price, description, coverimgurl, fbpdfurl, insertkey)
+                    insertBookToDB(name, lang, parts, price, description, coverimgurl, fbpdfurl, insertkey, author)
                 }
                     .addOnFailureListener {
                         Toast.makeText(this, "Unable to get pdf url", Toast.LENGTH_SHORT).show()
@@ -159,8 +166,8 @@ class Dashboard : AppCompatActivity() {
         }
     }
 
-    private fun insertBookToDB(name: String, lang: String, parts: Int, price: Int, description: String, coverimgurl: String, pdfurl: String, key: String){
-        val info = addbook(name, lang, parts, price, description, coverimgurl, pdfurl)
+    private fun insertBookToDB(name: String, lang: String, parts: String, price: String, description: String, coverimgurl: String, pdfurl: String, key: String, author: String){
+        val info = addbook(name, lang, parts, price, description, coverimgurl, pdfurl, author)
         connection.child(key).setValue(info)
         Toast.makeText(this, "Book uploaded to list successfully", Toast.LENGTH_SHORT).show()
     }

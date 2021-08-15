@@ -49,12 +49,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:orientation="vertical">
-            <com.google.android.material.imageview.ShapeableImageView
-                app:shapeAppearanceOverlay="@style/roundedImageView"
-                app:srcCompat="@drawable/culture"
+            <ImageView
+                android:src="@drawable/culture"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_width="250dp"
+                android:id="@+id/bkimg"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -63,7 +63,9 @@
                 android:gravity="center"
                 android:textSize="18dp"
                 android:fontFamily="@font/montserrat"
+                android:id="@+id/bkname"
                 android:text="Culture"
+                android:layout_marginTop="10dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -72,7 +74,8 @@
                 android:gravity="center"
                 android:textSize="15dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Mimi Amachree"
+                android:id="@+id/bkauthor"
+                android:layout_marginTop="5dp"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,21 +83,21 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_marginTop="5dp"
-
+                android:layout_marginTop="10dp"
                 >
+
                 <ImageView
-                    android:layout_marginEnd="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_baseline_favorite_border_24"
-                    />
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/ic_baseline_account_balance_24" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="75k Likes"
                     android:fontFamily="@font/montserrat"
                     android:layout_marginEnd="10dp"
+                    android:id="@+id/bkcat"
                     />
 
                 <ImageView
@@ -109,6 +112,7 @@
                     android:text="English"
                     android:fontFamily="@font/montserrat"
                     android:layout_marginEnd="10dp"
+                    android:id="@+id/bklang"
                     />
                 <ImageView
                     android:layout_marginEnd="5dp"
@@ -121,6 +125,7 @@
                     android:layout_height="wrap_content"
                     android:text="91 Parts"
                     android:fontFamily="@font/montserrat"
+                    android:id="@+id/bkparts"
                     />
             </LinearLayout>
             <LinearLayout
@@ -134,7 +139,7 @@
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="50dp"
-                    android:id="@+id/btnlog"
+                    android:id="@+id/btnread"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/readbtn"
@@ -150,6 +155,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Read"
+                        android:textSize="15dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/btnbuy"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/readbtn"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/ic_baseline_auto_stories" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Buy"
                         android:textSize="15dp"
                         android:layout_gravity="center"
                         android:fontFamily="@font/montserrat"
@@ -194,6 +225,7 @@
                 android:layout_gravity="start"
                 android:gravity="start"
                 android:textSize="12dp"
+                android:id="@+id/bkdescription"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"

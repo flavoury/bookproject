@@ -3,14 +3,15 @@ package com.favour.e_libary
 class booksItem {
     private lateinit var name : String
     private lateinit var language : String
-    private var parts : Int = 0
-    private var price : Int = 0
+    private lateinit var parts : String
+    private lateinit var price : String
     private lateinit var description : String
     private lateinit var coverimgurl : String
     private lateinit var pdfurl : String
     private lateinit var key: String
+    private lateinit var author : String
 
-    constructor(name: String, language: String, parts: Int, price: Int, description: String, coverimgurl: String, pdfurl: String, key: String){
+    constructor(name: String, language: String, parts: String, price: String, description: String, coverimgurl: String, pdfurl: String, key: String, author: String){
         this.name = name
         this.language = language
         this.parts = parts
@@ -19,6 +20,7 @@ class booksItem {
         this.coverimgurl = coverimgurl
         this.pdfurl = pdfurl
         this.key = key
+        this.author = author
     }
 
     fun getname() : String{
@@ -41,14 +43,17 @@ class booksItem {
         return pdfurl
     }
 
-    fun getprice(): Int{
+    fun getprice(): String{
         return price
     }
 
-    fun getparts(): Int{
+    fun getparts(): String{
         return parts
     }
     fun getkey() : String{
         return key
+    }
+    fun getauthor() : String{
+        return author
     }
 }

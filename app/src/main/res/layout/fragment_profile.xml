@@ -8,8 +8,6 @@
     tools:context=".ui.profile.ProfilepageFragment">
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
@@ -371,7 +369,7 @@
                 android:layout_marginEnd="10dp"
                 app:cardElevation="2dp"
                 android:layout_marginBottom="10dp"
-
+                android:id="@+id/signout"
                 >
 
                 <LinearLayout

@@ -91,14 +91,14 @@
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Full Name"
+                            android:hint="First Name"
 
                             >
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:inputType="text"
-                                android:id="@+id/edit_name"
+                                android:id="@+id/fname"
                                 android:background="@color/white"
 
                                 >
@@ -109,38 +109,21 @@
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Phone Number"
+                            android:hint="Last Name"
                             android:layout_marginTop="5dp"
                             >
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="number"
-                                android:id="@+id/edit_phone"
+                                android:inputType="text"
+                                android:id="@+id/lname"
                                 android:background="@color/white"
 
                                 >
 
                             </com.google.android.material.textfield.TextInputEditText>
                         </com.google.android.material.textfield.TextInputLayout>
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Address"
 
-                            android:layout_marginTop="5dp"
-                            >
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="number"
-                                android:id="@+id/address"
-                                android:background="@color/white"
-
-                                >
-
-                            </com.google.android.material.textfield.TextInputEditText>
-                        </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
@@ -152,10 +135,9 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="none"
-                                android:id="@+id/edit_email"
+                                android:inputType="textEmailAddress"
+                                android:id="@+id/email"
                                 android:background="@color/white"
-
                                 >
 
                             </com.google.android.material.textfield.TextInputEditText>
@@ -172,7 +154,7 @@
                             android:id="@+id/save_changes"
                             android:layout_marginStart="20dp"
                             android:layout_marginEnd="20dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="14dp"
                             android:layout_marginBottom="5dp"
                             />
 

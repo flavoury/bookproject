@@ -1,8 +1,10 @@
 package com.favour.e_libary
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import com.google.android.material.textfield.TextInputEditText
@@ -28,6 +30,11 @@ class createaccount : AppCompatActivity() {
         var emailid = findViewById<TextInputEditText>(R.id.email)
         var passid = findViewById<TextInputEditText>(R.id.pass)
         var signupbtn = findViewById<Button>(R.id.signup)
+        var loginid = findViewById<TextView>(R.id.login)
+
+        loginid.setOnClickListener {
+            startActivity(Intent(this, login::class.java))
+        }
 
         signupbtn.setOnClickListener {
             var fnamestr = fnameid.text.toString().trim()

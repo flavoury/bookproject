@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="150dp"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:background="@color/main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="2dp"
+    app:cardElevation="4dp"
     app:cardCornerRadius="6dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginBottom="180dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginStart="10dp"
+    android:id="@+id/talkbody"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,12 +18,11 @@
         android:background="@color/white"
         >
         <ImageView
-            android:id="@+id/thr"
-            android:layout_width="130dp"
+            android:id="@+id/bookimg"
+            android:layout_width="150dp"
             android:layout_height="200dp"
             android:layout_marginBottom="15dp"
-            android:layout_marginTop="-20dp"
-            android:background="@drawable/thriller1"
+            android:layout_marginTop="20dp"
             >
         </ImageView>
     <LinearLayout
@@ -37,7 +37,7 @@
         >
         <TextView
             android:id="@+id/talktitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_alternates"
             android:text="The Dark World"
@@ -45,7 +45,7 @@
             android:textColor="@color/main" />
         <TextView
             android:id="@+id/desc"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="10dp"
             android:fontFamily="@font/montserrat_alternates"
@@ -98,32 +98,33 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             >
-            <LinearLayout
-                android:layout_width="80dp"
-                android:layout_height="25dp"
-                android:id="@+id/btnlog"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:background="@drawable/readbtn"
-                >
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:background="@drawable/ic_baseline_auto_stories"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="12dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Read"
-                    android:textSize="10dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/montserrat"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    />
-            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="90dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:id="@+id/btnlog"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:background="@drawable/readbtn"-->
+<!--                android:layout_marginBottom="100dp"-->
+<!--                >-->
+<!--                <ImageView-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="10dp"-->
+<!--                    android:background="@drawable/ic_baseline_auto_stories"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginEnd="12dp"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="Preview"-->
+<!--                    android:textSize="12dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
 <!--            <LinearLayout-->
 <!--                android:layout_width="25dp"-->
 <!--                android:layout_height="25dp"-->

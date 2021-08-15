@@ -23,7 +23,8 @@
             android:layout_marginStart="20dp"
             android:fontFamily="@font/poppins"
             android:gravity="start"
-            android:text="Paid Stories"
+            android:text=""
+            android:id="@+id/pghead"
             android:layout_marginTop="20dp"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -37,7 +38,8 @@
             android:textCursorDrawable="@null"
             app:iconifiedByDefault="false"
             android:inputType="text"
-            app:queryHint="Search"
+            app:queryHint="Search name, language"
+            android:id="@+id/bksearch"
             android:background="@drawable/searchbtn"
             />
     </LinearLayout>

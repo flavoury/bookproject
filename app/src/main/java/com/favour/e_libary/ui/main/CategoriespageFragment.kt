@@ -18,15 +18,17 @@ class CategoriespageFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         val root = inflater.inflate(R.layout.categories_fragment, container, false)
-        val secur =root.findViewById<LinearLayout>(R.id.paid)
-        secur.setOnClickListener {
-            val intent = Intent(getActivity(), paidstories::class.java)
-            getActivity()?.startActivity(intent)
+        val paid =root.findViewById<LinearLayout>(R.id.paid)
+        paid.setOnClickListener {
+            val intent = Intent(requireContext(), paidstories::class.java)
+            intent.putExtra("type", "paid")
+            startActivity(intent)
         }
-        val secur1 =root.findViewById<LinearLayout>(R.id.free)
-        secur1.setOnClickListener {
-            val intent = Intent(getActivity(), paidstories::class.java)
-            getActivity()?.startActivity(intent)
+        val free =root.findViewById<LinearLayout>(R.id.free)
+        free.setOnClickListener {
+            val intent = Intent(requireContext(), paidstories::class.java)
+            intent.putExtra("type", "free")
+            startActivity(intent)
         }
 
         return root
