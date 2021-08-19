@@ -14,7 +14,7 @@
     <item
         android:id="@+id/navigation_categories"
         android:icon="@drawable/ic_baseline_category_24"
-        android:title="Library" />
+        android:title="Categories" />
 
     <item
         android:id="@+id/navigation_profile"

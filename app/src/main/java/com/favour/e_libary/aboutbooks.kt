@@ -64,6 +64,15 @@ class aboutbooks : AppCompatActivity() {
         }
         btnbuyid.setOnClickListener {
             val intent = Intent(this, pay::class.java)
+            intent.putExtra("book_key", key)
+            intent.putExtra("imgurl", imgurl)
+            intent.putExtra("description", description)
+            intent.putExtra("parts", parts)
+            intent.putExtra("price", price)
+            intent.putExtra("name", name)
+            intent.putExtra("pdfurl", pdfurl)
+            intent.putExtra("author", author)
+            intent.putExtra("language", lang)
             startActivity(intent)
         }
 

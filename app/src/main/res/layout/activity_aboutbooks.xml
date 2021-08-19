@@ -14,14 +14,7 @@
         android:layout_marginStart="10dp"
         app:layout_constraintBottom_toTopOf="@id/scroll"
         >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
 
-            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,12 +23,7 @@
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@id/scroll"
             >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_gravity="center"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_baseline_favorite_border_24"
-                />
+
         </LinearLayout>
     </LinearLayout>
     <ScrollView
@@ -52,8 +40,8 @@
             <ImageView
                 android:src="@drawable/culture"
                 android:layout_gravity="center"
-                android:layout_height="300dp"
-                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_width="200dp"
                 android:id="@+id/bkimg"
                 />
             <TextView
@@ -62,7 +50,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textSize="18dp"
-                android:fontFamily="@font/montserrat"
+                android:fontFamily="@font/montserrat_alternates"
                 android:id="@+id/bkname"
                 android:text="Culture"
                 android:layout_marginTop="10dp"
@@ -95,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="75k Likes"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/montserrat_alternates"
                     android:layout_marginEnd="10dp"
                     android:id="@+id/bkcat"
                     />
@@ -110,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="English"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/montserrat_alternates"
                     android:layout_marginEnd="10dp"
                     android:id="@+id/bklang"
                     />
@@ -124,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="91 Parts"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/montserrat_alternates"
                     android:id="@+id/bkparts"
                     />
             </LinearLayout>
@@ -157,7 +145,7 @@
                         android:text="Read"
                         android:textSize="15dp"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat"
+                        android:fontFamily="@font/montserrat_alternates"
                         android:gravity="center"
                         android:textColor="@color/white"
                         />
@@ -172,18 +160,18 @@
                     >
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginEnd="12dp"
-                        android:background="@drawable/ic_baseline_auto_stories" />
+                        android:background="@drawable/money" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Buy"
                         android:textSize="15dp"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat"
+                        android:fontFamily="@font/montserrat_alternates"
                         android:gravity="center"
                         android:textColor="@color/white"
                         />
@@ -216,7 +204,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:fontFamily="@font/montserrat"
+                android:fontFamily="@font/montserrat_alternates"
                 android:text="Description"
                 />
             <TextView
@@ -229,7 +217,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:fontFamily="@font/montserrat"
+                android:fontFamily="@font/montserrat_alternates"
                 android:text="Culture is the characteristics and knowledge of a particular group of people, encompassing language, religion, cuisine, social habits, music and arts. Thus, it can be seen as the growth of a group identity fostered by social patterns unique to the group."
                 />
         </LinearLayout>

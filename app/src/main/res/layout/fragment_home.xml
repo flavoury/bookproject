@@ -21,8 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/modern_antiqua"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/montserrat_alternates"
             android:gravity="center"
             android:text="Home"
             android:textColor="@color/main"
@@ -50,25 +50,22 @@
 <!--                android:background="@drawable/search"-->
 
 <!--                />-->
-            <androidx.cardview.widget.CardView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-               android:layout_gravity="center"
-                app:cardCornerRadius="30dp"
-                >
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="end"
                     >
                     <ImageView
                         android:id="@+id/profileicon"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/logo1"
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:layout_height="50dp"
+                        android:background="@drawable/profile1"
                         />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </LinearLayout>
     <ScrollView
@@ -86,8 +83,9 @@
             android:layout_width="match_parent"
             android:layout_height="170dp"
             app:cardCornerRadius="15dp"
-             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:background="@drawable/back"
+             android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             >
@@ -95,22 +93,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="@color/main"
+            android:background="@drawable/back"
             android:layout_gravity="center"
             android:gravity="center"
             >
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/main"
                 >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Welcome to BOOKI,"
                     android:textSize="20dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/montserrat_alternates"
                     android:layout_marginStart="10dp"
                     android:textColor="@color/white"
                     />
@@ -126,7 +124,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="'Study to yourself Approved'.\n2 Timothy 2:15"
+                    android:text="'A reader lives a thousand \nlives before he dies '."
                     android:textSize="12dp"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/white"
@@ -134,21 +132,15 @@
                     android:layout_marginStart="10dp"
                     />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="end"
-                android:layout_gravity="center"
-                >
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/homeknow"
-                    android:layout_gravity="bottom"
+            <ImageView
+                android:id="@+id/book_lover_"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/booklover"
+                />
 
-                    />
-            </LinearLayout>
         </LinearLayout>
+
         </androidx.cardview.widget.CardView>
         <LinearLayout
             android:layout_width="match_parent"
@@ -164,8 +156,8 @@
                 android:text="Popular books"
                 android:layout_gravity="center"
                 android:gravity="left"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:textSize="18dp"
                 android:textColor="#373737"
                 android:fontFamily="@font/poppins"
@@ -174,8 +166,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:orientation="horizontal"
                 android:gravity="center">
             <TextView
@@ -186,15 +178,9 @@
                 android:textSize="12dp"
                 android:textColor="@color/main"
                 android:fontFamily="@font/poppins"
+                android:id="@+id/vfree"
                 />
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginEnd="20dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="0.5dp"
-                android:background="@drawable/ic_baseline_arrow_forward_ios_24"
-                />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -202,6 +188,9 @@
                 android:id="@+id/poprecycle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -212,56 +201,256 @@
                 android:orientation="horizontal"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Top paid books"
                     android:layout_gravity="start"
                     android:gravity="start"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
                     android:textSize="18dp"
                     android:textColor="#373737"
                     android:fontFamily="@font/poppins"
                     />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View More"
+                        android:gravity="end"
+                        android:textSize="12dp"
+                        android:id="@+id/vpaid"
+                        android:textColor="@color/main"
+                        android:fontFamily="@font/poppins"
+                        />
 
+                </LinearLayout>
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/talkoftown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
                 />
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="170dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center"
+                android:elevation="25dp"
                 android:layout_marginTop="10dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="160dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get free interesting \nbooks to read \nat little to no cost and \nexpand your knowledge \nbase"
+                            android:textSize="12dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/main"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:layout_marginStart="10dp"
+                            />
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/booklover3"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center"
+                android:elevation="25dp"
+                android:layout_marginTop="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    >
+
+
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Get free interesting \nbooks to read \nat little to no cost and \nexpand your knowledge \nbase"
+                        android:textSize="12dp"
+                        android:background="@drawable/booklover1"
+                        />
+                    <TextView
+                        android:textColor="@color/main"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get free interesting \nbooks to read \nat little to no cost and \nexpand your knowledge \nbase"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_alternates"
+
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center"
+                android:elevation="25dp"
+                android:layout_marginTop="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get free interesting \nbooks to read \nat little to no cost and \nexpand your knowledge \nbase"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/main"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:layout_marginStart="10dp"
+                        />
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/booklover2"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center"
+                android:elevation="25dp"
+                android:layout_marginBottom="170dp"
+                android:layout_marginTop="10dp"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
                     >
-                    <ImageView
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:src="@drawable/stay"
-                        />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0.8dp"
-                        android:background="@color/input_border"
+                        android:layout_height="wrap_content"
+                        android:text="Book Fair 2021"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:textSize="18dp"
+                        android:textColor="#373737"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_alternates"
                         />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:textSize="13sp"
-                        android:text="Get free interesting books to read at little to no cost and expand your knowledge base"
+                        android:text="Spring Sale on now "
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="11dp"
+                        android:textColor="@color/main"
+                        android:fontFamily="@font/montserrat_alternates"
                         />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/books"
+                        android:layout_marginTop="5dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15% OFF"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_alternates"
+                        />
+                      <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                >
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/btnread"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/readbtn"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Get this deal now"
+                        android:textSize="15dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+                      </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

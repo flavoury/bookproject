@@ -29,18 +29,19 @@ class MainActivity2 : AppCompatActivity() {
         val reg = findViewById<LinearLayout>(R.id.btnsign)
 
         log.setOnClickListener {
-            val intent = Intent(this,createaccount::class.java)
+            val intent = Intent(this, createaccount::class.java)
             startActivity(intent)
 
         }
 
         reg.setOnClickListener {
-            val intent = Intent(this,login::class.java)
+            val intent = Intent(this, login::class.java)
             startActivity(intent)
 
         }
     }
 
-    var imageListener = ImageListener { position, imageView -> imageView.setImageResource(imgarr[position]) }    }
+
+   var imageListener = ImageListener { position, imageView -> imageView.setImageResource(imgarr[position]) }    }
 
 

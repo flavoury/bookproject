@@ -1,6 +1,7 @@
 package com.favour.e_libary.ui.home
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,10 +12,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.favour.e_libary.R
-import com.favour.e_libary.Recycler
-import com.favour.e_libary.booksItem
-import com.favour.e_libary.recyclertalkoftown
+import com.favour.e_libary.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -40,6 +38,20 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val listpaid: ArrayList<booksItem> = ArrayList()
         val listfree: ArrayList<booksItem> = ArrayList()
+        val vfreeid = root.findViewById<TextView>(R.id.vfree)
+        val vpaidid = root.findViewById<TextView>(R.id.vpaid)
+
+        vfreeid.setOnClickListener {
+            val intent = Intent(requireContext(), paidstories::class.java)
+            intent.putExtra("type", "free")
+            startActivity(intent)
+        }
+
+        vpaidid.setOnClickListener {
+            val intent = Intent(requireContext(), paidstories::class.java)
+            intent.putExtra("type", "paid")
+            startActivity(intent)
+        }
 
         //Event listener for selecting paid books from database
         val valueEventListener = object : ValueEventListener {
